@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sevenella Club — beleza, bem-estar e estilo em Hortolândia. Escolha seu serviço e agende online.">
+  <title>Sevenella Club | Beleza, bem-estar e estilo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b2f29'/%3E%3Cpath d='M18 44 32 16l14 28M23 36h18' fill='none' stroke='%23f6f2ee' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    // Permite visualizar o CSS mesmo se o HTML for aberto por duplo clique.
+    // O agendamento e a API continuam exigindo o servidor Flask.
+    const staticBase = "./static/";
+    const heroImage = 'url("./static/img/sevenella-hero.svg")';
+    document.documentElement.style.setProperty("--hero-image", heroImage);
+    document.write('<link rel="stylesheet" href="' + staticBase + 'css/site.css">');
+  </script>
+</head>
+<body>
+  <div class="aviso-servidor" role="status">Prévia do GitHub Pages: para agendamentos e painel com dados reais, conecte a API Flask hospedada. O sistema completo continua na pasta do projeto.</div>
+  <a class="pular" href="#principal">Ir para o conteúdo</a>
+
+  <header class="cabecalho">
+    <a class="logo" href="./" aria-label="Sevenella Club, início">
+      <span class="monograma">S</span>
+      <span class="marca">
+        <span class="logo-nome">SEVENELLA</span>
+        <span class="logo-meio">C L U B</span>
+        <span class="logo-sub">NAILS&nbsp; | &nbsp;HAIR&nbsp; | &nbsp;BEAUTY&nbsp; | &nbsp;HEALTH&nbsp; | &nbsp;LOVE</span>
+      </span>
+    </a>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="#principal">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#equipe">Nossa equipe</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="botao botao-topo" href="#agendar"><span aria-hidden="true">▦</span> AGENDAR <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="principal">
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="hero-imagem" role="img" aria-label="Interior sofisticado do Sevenella Club, com espelhos iluminados e poltronas de atendimento">
+        <div class="hero-selo"><span>✦</span> BELEZA · ESTILO · AUTOCUIDADO <i></i></div>
+        <div class="hero-conteudo">
+          <p class="hero-kicker">SEU MOMENTO COMEÇA AQUI</p>
+          <h1 id="hero-titulo">O melhor salão de beleza de <em>Hortolândia.</em></h1>
+          <p class="hero-lead">Realce o que há de mais bonito em você com cuidado, sofisticação e uma experiência feita para se sentir especial.</p>
+          <div class="hero-acoes">
+            <a class="botao botao-dourado" href="#agendar">AGENDAR AGORA <span aria-hidden="true">↗</span></a>
+            <a class="botao botao-contorno" href="#sobre">CONHEÇA O CLUBE <span aria-hidden="true">⌄</span></a>
+          </div>
+        </div>
+        <div class="hero-indice"><span>01</span><i></i> SEVENELLA CLUB</div>
+      </div>
+      <aside class="hero-lateral">
+        <div class="lateral-ornamento">S <span>✦</span> C</div>
+        <p class="sobretitulo"><i></i> SEVENELLA · HORTOLÂNDIA</p>
+        <h2>Um espaço para sua beleza <em>florescer.</em></h2>
+        <p class="lateral-texto">Cabelo, unhas e beleza em um só lugar. Atendimento atencioso, ambiente acolhedor e aquele cuidado que você merece.</p>
+        <div class="lateral-linha"></div>
+        <div class="lateral-detalhe"><span>01</span><span>BELEZA EM CADA DETALHE</span></div>
+        <a class="lateral-link" href="#servicos">EXPLORE NOSSOS SERVIÇOS <span>↗</span></a>
+      </aside>
+      <div class="beneficios">
+        <div><span class="beneficio-icone">✧</span><span><b>Beleza com qualidade</b><small>Cuidado em cada detalhe</small></span></div>
+        <div><span class="beneficio-icone">❀</span><span><b>Atendimento especial</b><small>Feito para você</small></span></div>
+        <div><span class="beneficio-icone">◇</span><span><b>Ambiente acolhedor</b><small>Seu momento de bem-estar</small></span></div>
+        <div><span class="beneficio-icone">☆</span><span><b>Equipe especializada</b><small>Profissionais preparados</small></span></div>
+      </div>
+    </section>
+
+    <div class="faixa-info" id="contato">
+      <span><b>⌖</b> Hortolândia | São Paulo | Brasil</span>
+      <span><b>◷</b> Segunda a sábado, das 8h às 20h</span>
+      <a href="#agendar">Entre em contato ↗</a>
+      <a href="#agendar">Agendar online ↗</a>
+      <a href="./painel.html">Painel do salão ↗</a>
+    </div>
+
+    <section class="secao servicos-secao" id="servicos" aria-labelledby="t-servicos">
+      <div class="secao-cabecalho">
+        <p class="sobretitulo central"><i></i> NOSSOS SERVIÇOS <i></i></p>
+        <h2 id="t-servicos">Cuidados completos <em>para você.</em></h2>
+        <p>Descubra nossos serviços e escolha o cuidado ideal para o seu momento.</p>
+      </div>
+      <ul class="precos" id="lista-servicos" aria-live="polite">
+        <li class="carregando">Carregando serviços…</li>
+      </ul>
+      <div class="secao-rodape"><span>SEVENELLA CLUB · BELEZA E BEM-ESTAR</span><a href="#agendar">ENCONTRE SEU SERVIÇO <b>↗</b></a></div>
+    </section>
+
+    <section class="sobre-secao" id="sobre" aria-labelledby="t-sobre">
+      <div class="sobre-foto">
+        <div class="sobre-foto-texto"><span>SEVENELLA</span><i>O seu lugar.</i></div>
+      </div>
+      <div class="sobre-conteudo">
+        <p class="sobretitulo"><i></i> SOBRE O CLUBE</p>
+        <h2 id="t-sobre">Mais do que beleza. Uma experiência de <em>bem-estar.</em></h2>
+        <p>Um ambiente pensado para você desacelerar, se cuidar e sair ainda mais confiante. Cada detalhe faz parte de uma experiência acolhedora e especial.</p>
+        <div class="sobre-itens">
+          <div><span>01</span><b>Você escolhe</b><small>Serviço, profissional, dia e horário.</small></div>
+          <div><span>02</span><b>Sem complicação</b><small>Agendamento simples e organizado.</small></div>
+          <div><span>03</span><b>Seu momento</b><small>Cuidado e atenção em cada visita.</small></div>
+        </div>
+        <a class="link-simples" href="#agendar">RESERVE SEU MOMENTO <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="secao equipe-secao" id="equipe" aria-labelledby="t-equipe">
+      <div class="secao-cabecalho">
+        <p class="sobretitulo central"><i></i> QUEM FAZ ACONTECER <i></i></p>
+        <h2 id="t-equipe">Pessoas que cuidam de <em>pessoas.</em></h2>
+        <p>Conheça quem vai acompanhar você em cada etapa do seu momento de beleza.</p>
+      </div>
+      <ul class="equipe" id="lista-equipe" aria-live="polite">
+        <li class="carregando">Carregando equipe…</li>
+      </ul>
+    </section>
+
+    <section class="agendar" id="agendar" aria-labelledby="t-agendar">
+      <div class="agendar-texto">
+        <p class="sobretitulo claro"><i></i> SEU PRÓXIMO MOMENTO</p>
+        <h2 id="t-agendar">Vamos reservar um tempo para <em>você?</em></h2>
+        <p>Escolha o serviço, a profissional e o melhor horário. Seu agendamento será registrado e aparecerá no painel do salão.</p>
+        <div class="agendar-assinatura"><span>SEVENELLA</span><i>C L U B</i></div>
+      </div>
+      <div class="cartao-form">
+        <form id="form-agendar" novalidate>
+          <p class="form-titulo">Faça seu agendamento</p>
+          <p class="form-subtitulo">Preencha seus dados para escolher seu horário.</p>
+          <div class="grade-form">
+            <div class="campo"><label for="f-nome">Seu nome</label><input id="f-nome" autocomplete="name" placeholder="Como podemos chamar você?" required></div>
+            <div class="campo"><label for="f-telefone">Telefone</label><input id="f-telefone" type="tel" autocomplete="tel" placeholder="(19) 99999-0000" required></div>
+            <div class="campo largo"><label for="f-email">E-mail <span>(opcional)</span></label><input id="f-email" type="email" autocomplete="email" placeholder="voce@email.com"></div>
+            <div class="campo"><label for="f-servico">Serviço desejado</label><select id="f-servico" required><option value="">Carregando…</option></select></div>
+            <div class="campo"><label for="f-prof">Profissional</label><select id="f-prof" required><option value="">Carregando…</option></select></div>
+            <div class="campo largo"><label for="f-data">Data desejada</label><input id="f-data" type="date" required></div>
+          </div>
+          <fieldset class="horarios-box">
+            <legend>Escolha um horário disponível</legend>
+            <div id="horarios" class="horarios" aria-live="polite"><p class="dica">Escolha serviço, profissional e dia para ver os horários.</p></div>
+          </fieldset>
+          <p id="erro-form" class="erro-form" role="alert" hidden></p>
+          <button class="botao botao-marrom cheio" id="btn-confirmar" type="submit">CONFIRMAR AGENDAMENTO <span>↗</span></button>
+          <p class="privacidade">Seus dados serão utilizados para organizar seu atendimento.</p>
+        </form>
+        <div id="confirmacao" class="confirmacao" hidden tabindex="-1">
+          <p class="sobretitulo"><i></i> TUDO CERTO</p>
+          <h3>Seu momento está reservado.</h3>
+          <p>Confira os detalhes do seu agendamento:</p>
+          <dl id="resumo"></dl>
+          <button class="botao botao-marrom" id="btn-outro" type="button">AGENDAR OUTRO HORÁRIO</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-topo">
+      <a class="logo logo-rodape" href="./" aria-label="Sevenella Club">
+        <span class="monograma">S</span><span class="marca"><span class="logo-nome">SEVENELLA</span><span class="logo-meio">C L U B</span></span>
+      </a>
+      <p>Beleza, bem-estar e estilo. Um espaço para você.</p>
+      <a class="rodape-voltar" href="#principal">VOLTAR AO TOPO ↑</a>
+    </div>
+    <div class="rodape-linha">
+      <span>Hortolândia | São Paulo | Brasil</span>
+      <span>Segunda a sábado, das 8h às 20h</span>
+      <a href="#agendar">Agendar online</a>
+      <a href="./painel.html">Painel do salão</a>
+    </div>
+    <p class="rodape-nota">Projeto Integrado (DWS, POO e BD), Colégio UNASP, Unidade Hortolândia.</p>
+  </footer>
+
+  <script>
+    if (location.protocol === "file:") {
+      document.body.insertAdjacentHTML("afterbegin",
+        '<p class="aviso-servidor">Para usar o agendamento, inicie o projeto com <code>python run.py</code> e acesse <code>http://127.0.0.1:5000</code>.</p>');
+    }
+    document.write('<script src="' + staticBase + 'js/api.js"><\/script>');
+    document.write('<script src="' + staticBase + 'js/site.js"><\/script>');
+  </script>
+</body>
+</html>

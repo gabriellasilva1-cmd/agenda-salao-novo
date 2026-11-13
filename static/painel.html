@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Agenda do Salão: horários, clientes, profissionais e serviços em um só lugar.">
+  <title>Painel | Agenda do Salão</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b1630'/%3E%3Cpath d='M18 44 32 16l14 28M23 36h18' fill='none' stroke='%23f8dfe8' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+  <div class="app">
+    <aside class="lateral">
+      <a class="marca" href="#inicio" aria-label="Painel da Agenda do Salão">
+        <span class="marca-nome">Agenda do Salão</span>
+        <span class="marca-sub">Hortolândia</span>
+      </a>
+
+      <nav id="menu" aria-label="Principal">
+        <a href="#inicio">Início</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#profissionais">Profissionais</a>
+        <a href="#servicos">Serviços</a>
+        <a href="/" class="ver-site">Ver site</a>
+      </nav>
+
+      <p class="rodape-lateral">Projeto Integrado<br>DWS, POO e BD<br>Colégio UNASP</p>
+    </aside>
+
+    <main id="conteudo" tabindex="-1">
+      <p class="carregando">Carregando…</p>
+      <noscript><p class="vazio erro">Esta página precisa de JavaScript para funcionar.</p></noscript>
+    </main>
+  </div>
+
+  <dialog id="modal" aria-labelledby="modal-titulo"></dialog>
+  <div id="avisos" role="status" aria-live="polite"></div>
+
+  <script>
+    // Abrir o arquivo direto (duplo clique) não carrega o CSS nem a API.
+    if (location.protocol === "file:") {
+      document.getElementById("conteudo").innerHTML =
+        '<div class="vazio erro"><p><strong>Abra pelo servidor, não pelo arquivo.</strong></p>' +
+        '<p>No terminal, rode <code>python run.py</code> e acesse <code>http://127.0.0.1:5000/painel</code></p></div>';
+    }
+  </script>
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
